@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">WeatherApp_A1</string>
-    <string name="to_second_activity">To second activity</string>
+    <string name="to_second_activity">Show weather</string>
+    <string name="city">City</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="solar_activity">Solar Activity</string>
 </resources>
