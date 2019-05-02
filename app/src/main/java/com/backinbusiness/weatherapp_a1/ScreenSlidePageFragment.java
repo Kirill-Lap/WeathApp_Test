@@ -1,5 +1,6 @@
 package com.backinbusiness.weatherapp_a1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,16 +17,22 @@ import java.util.Date;
 
 public class ScreenSlidePageFragment extends Fragment {
 
+    private int pageNum=0;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Bundle bundle = this.getArguments();
-        int pageNum=0;
         if (bundle != null) {
             pageNum = bundle.getInt("page_number", 1);
         }
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_screen_slide_page,container,false);
+        initView(rootView, bundle);
+        return rootView;
+    }
+
+
+    public void initView(ViewGroup rootView, Bundle bundle) {
         ImageView img = rootView.findViewById(R.id.id_gallery_item_image);
         img.setImageResource(ScreenSlideActivity.weatherImgIds[pageNum]);
         TextView txt = rootView.findViewById(R.id.id_gallery_item_text);
@@ -34,7 +41,25 @@ public class ScreenSlidePageFragment extends Fragment {
         Date date = calendar.getTime();
         String str  = DateFormat.getDateInstance(DateFormat.DATE_FIELD).format(date);
         txt.setText(str);
-        return rootView;
 
+        TextView humidityText = rootView.findViewById(R.id.id_humidity_text);
+        TextView windText = rootView.findViewById(R.id.id_wind_text);
+        TextView pressureText = rootView.findViewById(R.id.id_pressure_text);
+
+        if (bundle.getBoolean("humidity", false))
+            humidityText.setVisibility(View.VISIBLE);
+        else
+            humidityText.setVisibility(View.GONE);
+
+        if (bundle.getBoolean("pressure", false))
+            pressureText.setVisibility(View.VISIBLE);
+        else
+            pressureText.setVisibility(View.GONE);
+
+        if (bundle.getBoolean("wind", false))
+            windText.setVisibility(View.VISIBLE);
+        else
+            windText.setVisibility(View.GONE);
     }
+
 }

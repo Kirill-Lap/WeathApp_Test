@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/holo_blue_light"
     tools:context=".MainActivity">
 
     <EditText
@@ -19,34 +18,35 @@
 
     <Switch
         android:id="@+id/humiditySwitch"
+        style="@style/TextAppearance.AppCompat.SwitchText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/humidity"
-        android:textSize="30sp"/>
+        android:text="@string/humidity"/>
 
     <Switch
         android:id="@+id/windSwitch"
+        style="@style/TextAppearance.AppCompat.SwitchText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/wind"
-        android:textSize="30sp"/>
+        android:text="@string/wind"/>
 
     <Switch
         android:id="@+id/solarSwitch"
+        style="@style/TextAppearance.AppCompat.SwitchText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/solar_activity"
-        android:textSize="30sp"/>
+        android:text="@string/solar_activity"/>
 
     <Button
         android:id="@+id/toSecondActivityBtn"
-        android:layout_width="match_parent"
+        style="@style/BtnText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:textSize="25sp"
         android:text="@string/to_second_activity"/>
 
     <ImageView

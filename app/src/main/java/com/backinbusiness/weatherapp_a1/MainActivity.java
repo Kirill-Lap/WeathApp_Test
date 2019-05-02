@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyActivity";
     private Switch humiditySwitch;
     private Switch windSwitch;
-    private Switch solarSwitch;
+    private Switch pressureSwitch;
     private EditText cityTextBox;
 
     @Override
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("city", str);
                 intent.putExtra("humidity", humiditySwitch.isChecked());
                 intent.putExtra("wind", windSwitch.isChecked());
-                intent.putExtra("solar", solarSwitch.isChecked());
+                intent.putExtra("pressure", pressureSwitch.isChecked());
                 startActivity(intent);
             }
         });
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private void initItems(){
         humiditySwitch = findViewById(R.id.humiditySwitch);
         windSwitch = findViewById(R.id.windSwitch);
-        solarSwitch = findViewById(R.id.solarSwitch);
+        pressureSwitch = findViewById(R.id.solarSwitch);
         cityTextBox = findViewById(R.id.cityTextBox);
     }
 
