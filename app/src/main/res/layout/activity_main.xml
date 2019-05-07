@@ -1,22 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <EditText
+        android:background="@android:drawable/editbox_background"
+        android:id="@+id/cityTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:textSize="30sp"
+        android:hint = "@string/city"/>
+
+    <Switch
+        android:id="@+id/humiditySwitch"
+        style="@style/TextAppearance.AppCompat.SwitchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/humidity"/>
+
+    <Switch
+        android:id="@+id/windSwitch"
+        style="@style/TextAppearance.AppCompat.SwitchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/wind"/>
+
+    <Switch
+        android:id="@+id/solarSwitch"
+        style="@style/TextAppearance.AppCompat.SwitchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/solar_activity"/>
+
     <Button
         android:id="@+id/toSecondActivityBtn"
+        style="@style/BtnText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="@string/to_second_activity"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/object1" />
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="300dp"
+        android:src="@drawable/wi_02" />
 
 
 </LinearLayout>
